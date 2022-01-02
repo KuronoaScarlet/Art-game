@@ -11,12 +11,16 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     double size1 = 200;
-    double size2 = 75;
+    double size2 = 50;
     return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            const Text(
+              "🖌️Sketch It!❤️",
+              style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
+            ),
             Column(
               children: [
                 IconButton(
@@ -30,7 +34,7 @@ class _MainScreenState extends State<MainScreen> {
                 const Text(
                   "GAME",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 25,
                   ),
                 ),
               ],
@@ -48,7 +52,7 @@ class _MainScreenState extends State<MainScreen> {
                 const Text(
                   "Configuration",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 17,
                   ),
                 ),
               ],

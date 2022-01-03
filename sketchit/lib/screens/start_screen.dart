@@ -11,6 +11,7 @@ class StartScreen extends StatefulWidget {
 class _StartScreenState extends State<StartScreen> {
   @override
   Widget build(BuildContext context) {
+    int defaultTime = 60;
     return Scaffold(
       backgroundColor: Colors.yellow[400],
       body: Center(
@@ -31,7 +32,9 @@ class _StartScreenState extends State<StartScreen> {
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => const MainScreen(),
+                builder: (context) => MainScreen(
+                  time: defaultTime,
+                ),
               ),
             );
           },

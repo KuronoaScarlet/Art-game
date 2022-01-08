@@ -18,12 +18,9 @@ class _StartScreenState extends State<StartScreen> {
         child: GestureDetector(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
-              Icon(
-                Icons.image,
-                size: 250,
-              ),
-              Text(
+            children: [
+              Image.asset("assets/SketchIt.png"),
+              const Text(
                 "Tap to Start!",
                 style: TextStyle(fontSize: 45),
               ),

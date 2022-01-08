@@ -4,6 +4,7 @@ import 'dart:math';
 
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
+import 'package:sketchit/screens/finish_screen.dart';
 import 'package:sketchit/screens/main_screen.dart';
 
 class GameScreen extends StatefulWidget {
@@ -224,17 +225,17 @@ class _GameScreenState extends State<GameScreen> {
                     controller: _controller,
                     width: MediaQuery.of(context).size.width / 2,
                     height: MediaQuery.of(context).size.height / 2,
-                    ringColor: Colors.grey[300]!,
+                    ringColor: Colors.white,
                     ringGradient: null,
-                    fillColor: Colors.blueAccent[100]!,
+                    fillColor: Colors.black,
                     fillGradient: null,
-                    backgroundColor: Colors.blue[500],
+                    backgroundColor: Colors.white,
                     backgroundGradient: null,
                     strokeWidth: 20.0,
                     strokeCap: StrokeCap.round,
                     textStyle: const TextStyle(
                         fontSize: 33.0,
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.bold),
                     textFormat: CountdownTextFormat.S,
                     isReverse: false,
@@ -247,9 +248,8 @@ class _GameScreenState extends State<GameScreen> {
                       if (int.parse(_controller.getTime()) == widget.time) {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => MainScreen(
-                              time: widget.time,
-                            ),
+                            builder: (context) =>
+                                FinishScreen(time: widget.time),
                           ),
                         );
                       }
